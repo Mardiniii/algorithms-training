@@ -1,3 +1,4 @@
+# O(h) time and O(h) space => h: height of the tree
 def find_second_largest(root_node)
   if !root_node || (!root_node.left && !root_node.right)
     raise "We need at least two nodes."
@@ -17,6 +18,35 @@ def find_largest(root_node)
     find_largest(root_node.right)
   else
     root_node.value
+  end
+end
+
+# O(h) time and O(1) space => h: height of the three
+def find_second_largest(root_node)
+  current_node = root_node
+
+  if !current_node || (!current_node.left && !current_node.right)
+    raise "We need at least two nodes."
+  end
+
+  while current_node
+    if current_node.left && !current_node.right
+      return find_largest(current_node.left)
+    elsif current_node.right && !current_node.right.left && !current_node.right.right
+      return current_node.value
+    else
+      current_node = current_node.right
+    end
+  end
+end
+
+def find_largest(root_node)
+  current_node = root_node
+
+  while current_node
+    return current_node.value unless current_node.right
+
+    current_node = current_node.right
   end
 end
 
