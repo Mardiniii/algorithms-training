@@ -8,13 +8,29 @@ import static org.junit.Assert.*;
 public class Solution {
 
     public static int[] getProductsOfAllIntsExceptAtIndex(int[] intArray) {
+        if (intArray.length <= 1) {
+            throw new IllegalArgumentException("Array should have at least 2 items");
+        }
+
         int[] products = new int[intArray.length];
         int product = 1;
 
-        for (int i = 0; i < intArray.length; i++) {}
+        for (int i = 0; i < intArray.length; i++) {
+            products[i] = product;
+            product = product * intArray[i];
+        }
+
+        product = 1;
+        int i = intArray.length -1;
+
+        while (i >= 0) {
+            products[i] *= product;
+            product *= intArray[i];
+            i--;
+        }
 
         // make an array of the products
-        return new int[intArray.length];
+        return products;
     }
 
     // tests
