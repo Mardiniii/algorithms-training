@@ -14,7 +14,7 @@ public class Solution {
         int ceilingIndex = words.length - 1;
 
         while (floorIndex < ceilingIndex) {
-            int distance = (ceilingIndex - floorIndex) / 2 ;
+            int distance = (ceilingIndex - floorIndex) / 2;
             int guessIndex = floorIndex + distance;
 
             if (words[guessIndex].compareTo(firstWord) >= 0) {
