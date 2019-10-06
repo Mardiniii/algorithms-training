@@ -10,15 +10,14 @@ import static org.junit.Assert.*;
 public class Solution {
 
     public static boolean hasPalindromePermutation(String theString) {
-        HashSet<Character> unpairedCharacters = new HashSet<Character>();
+        HashSet<Character> unpairedCharacters = new HashSet<>();
         // check if any permutation of the input is a palindrome
 
-        for (int i = 0; i < theString.length(); i++) {
-            char character = theString.charAt(i);
-            if (unpairedCharacters.contains(character)) {
-                unpairedCharacters.remove(character);
+        for (char c: theString.toCharArray()) {
+            if (unpairedCharacters.contains(c)) {
+                unpairedCharacters.remove(c);
             } else {
-                unpairedCharacters.add(character);
+                unpairedCharacters.add(c);
             }
         }
 
