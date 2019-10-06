@@ -22,6 +22,8 @@ public class Solution {
             }
         }
 
+        if (takeOutIndex != takeOut.length || dineInIndex != dineIn.length) return false;
+
         return true;
     }
 
