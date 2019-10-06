@@ -19,9 +19,9 @@ public class Solution {
 
             if (movieLengthsSet.contains(movieLengthNeeded)) {
                 return true;
-            } else {
-                movieLengthsSet.add(movieLength);
             }
+
+            movieLengthsSet.add(movieLength);
         }
 
         return false;
