@@ -1,4 +1,4 @@
-Write a method fib() that takes an integer nn and returns the nnth Fibonacci number.
+Write a method fib() that takes an integer n and returns the nnth Fibonacci number.
 
 Let's say our Fibonacci series is 0-indexed and starts with 0. So:
 
