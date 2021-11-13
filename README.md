@@ -18,6 +18,7 @@ TBD
 
 ### Sorting
   - [Selection Sort](algorithms/sorting/selection_sort/description.md)
+  - [Quicksort](algorithms/sorting/quicksort/description.md)
 
 ## Problems
 
